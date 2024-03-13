@@ -1,8 +1,16 @@
-function SkillsCerts() {
+
+function SkillsCerts({certs, setCerts}) {
+    // const [certs, setCerts] = useState("");
+
+    const handleInput = (event) => {
+        setCerts(event.target.value);
+    } 
+
     return (
         <>
         <h2>Skills And Certifications</h2>
-        <textarea name="skills" id="skills" cols="30" rows="10" />
+        <label htmlFor="skills">Skills:</label>
+        <textarea name="skills" value={certs} onChange={(event) => handleInput(event)} id="skills" cols="30" rows="10" />
         </>
     )
 }

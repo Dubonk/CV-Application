@@ -1,9 +1,8 @@
-import { useState } from "react";
 
-function WorkHistory() {
-  const [workHistList, setWorkHistList] = useState([
-    { companyName: "", position: "", responsibilities: "", date: { start: "", end: "" } }
-  ]);
+function WorkHistory({workHistList, setWorkHistList}) {
+  // const [workHistList, setWorkHistList] = useState([
+  //   { companyName: "", position: "", responsibilities: "", date: { start: "", end: "" } }
+  // ]);
 
   const handleInput = (event, index, field, subField) => {
     setWorkHistList((prevWorkHistList) => {
@@ -64,7 +63,6 @@ function WorkHistory() {
         </div>
       ))}
       <button onClick={addWork}>Add Work</button>
-      {console.log(workHistList)}
     </>
   );
 }

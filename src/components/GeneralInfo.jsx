@@ -1,8 +1,5 @@
-import { useState } from "react"
-
-
-function GeneralInfo() {
-    const [genInfo, setGenInfo] = useState({firstName: "", lastName: "", email: "", phone: ""})
+function GeneralInfo({genInfo, setGenInfo}) {
+    // const [genInfo, setGenInfo] = useState({firstName: "", lastName: "", email: "", phone: ""})
 
     const handleInput = (event, field) => {
         setGenInfo({
