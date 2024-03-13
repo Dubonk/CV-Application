@@ -25,38 +25,47 @@ function WorkHistory({workHistList, setWorkHistList}) {
     ]);
   };
 
+  const removeJob = (index) => {
+    setWorkHistList((prevWorkHistList) => {
+      const updatedList = [...prevWorkHistList];
+      updatedList.splice(index, 1);
+      return updatedList;
+    });
+  };
+
   return (
     <>
       <h2>Work History</h2>
       {workHistList.map((workHist, index) => (
         <div className="workForm" key={index}>
-            <h3 key={index}>company {index + 1}</h3>
+            <h3>company {index + 1}</h3>
           <input
-            type="text"
+            type="text" value={workHist.companyName}
             onChange={(event) => handleInput(event, index, "companyName")}
             placeholder="Company Name"
           />
           <input
-            type="text"
+            type="text" value={workHist.position}
             onChange={(event) => handleInput(event, index, "position")}
             placeholder="Position"
           />
           <textarea
             cols="30"
-            rows="5"
+            rows="5" value={workHist.responsibilities}
             onChange={(event) => handleInput(event, index, "responsibilities")}
             placeholder="Responsibilities"
           />
           <label htmlFor="startDate">Start Date</label>
           <input
-            type="date" name="startDate" id="startDate"
+            type="date" name="startDate" id="startDate" value={workHist.date.start}
             onChange={(event) => handleInput(event, index, "date", "start")}
           />
           <label htmlFor="endDate">End Date</label>
           <input
-            type="date" name="endDate" id="endDate"
+            type="date" name="endDate" id="endDate" value={workHist.date.end}
             onChange={(event) => handleInput(event, index, "date", "end")}
           />
+          <button onClick={() => removeJob(index)}>Remove work</button>
         </div>
       ))}
       <button onClick={addWork}>Add Work</button>
