@@ -1,6 +1,5 @@
 
 function EducationHistory({educationHist, setEducationHist}) {
-    // const [educationHist, setEducationHist] = useState({schoolName: "", study: "", date: ""});
 
     const handleInput = (event, field) => {
         setEducationHist({
@@ -13,9 +12,9 @@ function EducationHistory({educationHist, setEducationHist}) {
         <>
         <h2>Education</h2>
         <div className="education">
-            <input type="text" onChange={(event) => handleInput(event, "schoolName")} placeholder="School"/>
-            <input type="text" onChange={(event) => handleInput(event, "study")} placeholder="Study"/>
-            <input type="date" onChange={(event) => handleInput(event, "date")}/>
+            <input type="text" value={educationHist.schoolName} onChange={(event) => handleInput(event, "schoolName")} placeholder="School"/>
+            <input type="text" value={educationHist.study} onChange={(event) => handleInput(event, "study")} placeholder="Study"/>
+            <input type="date" value={educationHist.date} onChange={(event) => handleInput(event, "date")}/>
         </div>
         </>
     )

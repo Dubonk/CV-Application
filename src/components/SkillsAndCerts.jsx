@@ -1,7 +1,5 @@
 
 function SkillsCerts({certs, setCerts}) {
-    // const [certs, setCerts] = useState("");
-
     const handleInput = (event) => {
         setCerts(event.target.value);
     } 

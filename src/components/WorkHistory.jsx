@@ -1,8 +1,5 @@
 
 function WorkHistory({workHistList, setWorkHistList}) {
-  // const [workHistList, setWorkHistList] = useState([
-  //   { companyName: "", position: "", responsibilities: "", date: { start: "", end: "" } }
-  // ]);
 
   const handleInput = (event, index, field, subField) => {
     setWorkHistList((prevWorkHistList) => {
