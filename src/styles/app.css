@@ -22,19 +22,33 @@ body {
 }
 
 .resumeForm {
-    width: 30%;
-    height: 100%;
+    width: 25%;
+    height: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    overflow: auto;
 }
 
-h2 {
-    text-decoration: underline;
+input {
+    width: 75%;
 }
 
-#resumeComplete {
-    width: 50%;
-    height: 90%;
-    background-color: white;
+.genInfoForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.workForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.education {
+    display: flex;
+    flex-direction: column;
+}
+
+.certs {
+    display: flex;
+    flex-direction: column;
 }

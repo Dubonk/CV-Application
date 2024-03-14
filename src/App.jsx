@@ -36,6 +36,19 @@ function App() {
     return JSON.parse(localCerts)
   });
 
+
+  const clearAllInputs = () => {
+    setGenInfo({
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: ''
+    });
+    setWorkHistList([]);
+    setEducationHist({schoolName: '', study: '', date: ''});
+    setCerts('');
+  };
+
   useEffect(() => {
     localStorage.setItem("GENINFO", JSON.stringify(genInfo))
   }, [genInfo])
@@ -60,7 +73,8 @@ function App() {
       <GeneralInfo genInfo={genInfo} setGenInfo={setGenInfo}/>
       <WorkHistory workHistList={workHistList} setWorkHistList={setWorkHistList} />
       <EducationHistory educationHist={educationHist} setEducationHist={setEducationHist}/>
-      <SkillsCerts certs={certs} setSkillsCerts={setCerts}/>
+      <SkillsCerts certs={certs} setCerts={setCerts}/>
+      <button onClick={clearAllInputs}>Clear All Inputs</button>
     </div>
     <DisplayResume
       genInfo={genInfo}
