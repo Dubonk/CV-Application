@@ -6,6 +6,16 @@ function GeneralInfo({ genInfo, setGenInfo }) {
             [field]: event.target.value
         });
     } 
+
+    const handlePhoneInput = (event) => {
+        const phoneNumber = event.target.value.replace(/\D/g, '').slice(0, 10); // Remove non-digit characters
+        setGenInfo({
+            ...genInfo,
+            phone: phoneNumber
+        });
+    }
+
+
     return (
         <>
         <h2>General Info</h2>
@@ -17,7 +27,7 @@ function GeneralInfo({ genInfo, setGenInfo }) {
         <label htmlFor="email">Email:</label>
         <input type="email" id="email" value={genInfo.email} onChange={(event) => handleInput(event, "email")} placeholder="Email"/>
         <label htmlFor="phone">Phone:</label>
-        <input type="tel" id="phone" value={genInfo.phone} onChange={(event) => handleInput(event, "phone")} placeholder="Phone"/>
+        <input type="tel" id="phone" value={genInfo.phone} onChange={handlePhoneInput} placeholder="Phone" inputMode="numeric"/>
         </form>
         </>
     )

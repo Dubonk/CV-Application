@@ -14,7 +14,7 @@ function EducationHistory({educationHist, setEducationHist}) {
         <div className="education">
             <input type="text" value={educationHist.schoolName} onChange={(event) => handleInput(event, "schoolName")} placeholder="School"/>
             <input type="text" value={educationHist.study} onChange={(event) => handleInput(event, "study")} placeholder="Study"/>
-            <input type="month" value={educationHist.date} onChange={(event) => handleInput(event, "date")}/>
+            <input type="month" className="datePicker" value={educationHist.date} onChange={(event) => handleInput(event, "date")}/>
         </div>
         </>
     )

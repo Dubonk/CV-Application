@@ -1,3 +1,9 @@
+.displaySection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #resumeComplete {
     min-width: 750px;
     width: 30%;
@@ -9,38 +15,48 @@
     color: black;
 }
 
-.GeneralInfo {
-    /* border-bottom: 1px solid rgb(96, 0, 121); */
-}
-
-.workHistory {
-    /* border-bottom: 1px solid rgb(96, 0, 121); */
-}
-
-.workInfo {
-    /* border-bottom: 1px solid gray; */
-
-}
-
 .positionAndDate {
     color: rgb(148, 148, 148);
-    
 }
 
 .jobDuties {
     width: 50%;
-}
-.educationSection {
-    /* border-bottom: 1px solid rgb(96, 0, 121); */
 }
 
 .sectionTitle {
     border-bottom: 1px solid grey;
 }
 
-/* .certsSection {
+button {
+  background-color: rgb(141, 173, 204);
+  width: 120px;
+  border-radius: 8px;
+  border-width: 0;
+  color: #333333;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin: 5px;
+  padding: 10px 12px;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  touch-action: manipulation;
+}
 
-} */
+button:hover {
+    background-color: rgb(134, 162, 212);
+}
+
+button:active {
+    background-color: rgb(224, 224, 224);
+    transform: scale(0.9);
+}
 
 @media (max-width: 1280px) {
     #resumeComplete {

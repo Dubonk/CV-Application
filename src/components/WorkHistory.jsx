@@ -64,12 +64,12 @@ function WorkHistory({workHistList, setWorkHistList}) {
           />
           <label htmlFor="startDate">Start Date</label>
           <input
-            type="month" name="startDate" id="startDate" value={workHist.date.start}
+            type="month" className='datePicker' name="startDate" id="startDate" value={workHist.date.start}
             onChange={(event) => handleInput(event, index, "date", "start")}
           />
           <label htmlFor="endDate">End Date</label>
           <input
-            type="month" name="endDate" id="endDate" value={workHist.date.end}
+            type="month" className='datePicker' name="endDate" id="endDate" value={workHist.date.end}
             onChange={(event) => handleInput(event, index, "date", "end")}
           />
           <button onClick={() => removeJob(index)}>Remove work</button>

@@ -28,12 +28,13 @@ function DisplayResume({genInfo, workHistList, educationHist, certs}) {
     };
 
     return (
-        <div>
+        <div className='displaySection'>
+        <button id='downloadBtn' onClick={() => downloadResume()}>Download</button>
         <div id="resumeComplete" ref={resumeCompleteRef}>
             <div className="GeneralInfo">
-                <h1>{genInfo.firstName} {genInfo.lastName}</h1>
-                <p>{genInfo.email}</p>
-                <p>{genInfo.phone}</p>
+                <h1>{genInfo.firstName || 'John'} {genInfo.lastName || 'Doe'}</h1>
+                <p>{genInfo.email || 'Johndoe@email.com'}</p>
+                <p>{genInfo.phone || '555-555-5555'}</p>
             </div>
                 {hasWork && workHistList.length > 0 ? 
                     <div className="workHistory">
@@ -64,7 +65,6 @@ function DisplayResume({genInfo, workHistList, educationHist, certs}) {
                     </div> : <div></div> } 
             </div>
         </div>
-        <button onClick={() => downloadResume()}>Download</button>
         </div>
     )
 }
