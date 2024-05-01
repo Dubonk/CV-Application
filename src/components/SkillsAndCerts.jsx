@@ -7,7 +7,6 @@ function SkillsCerts({certs, setCerts}) {
     return (
         
         <div className="certs">
-            {console.log(certs)}
         <h2>Skills And Certifications</h2>
         <label htmlFor="skills">Skills:</label>
         <textarea name="skills" value={certs} onChange={(event) => handleInput(event)} id="skills" cols="30" rows="10" />

@@ -1,6 +1,7 @@
 
 body {
-    background-color: rgb(175, 172, 172);
+    color: white;
+    background-color: rgb(46, 64, 83);
     width: 100%;
     height: 100vh;
 }
@@ -31,6 +32,10 @@ body {
 
 input {
     width: 75%;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 .genInfoForm {

@@ -1,5 +1,12 @@
+import PropTypes from 'prop-types';
+
 
 function WorkHistory({workHistList, setWorkHistList}) {
+
+  WorkHistory.propTypes = {
+    workHistList: PropTypes.array,
+    setWorkHistList: PropTypes.func
+  }
 
   const handleInput = (event, index, field, subField) => {
     setWorkHistList((prevWorkHistList) => {
